@@ -1,11 +1,16 @@
 import os
 import sys
+import logging
 from typing import List
 
 import fire
 import torch
 import transformers
+import datasets
 from datasets import load_dataset
+from utils.trainer import AlpacaTrainer
+
+from utils.parser import parse_response
 
 """
 Unused imports:
@@ -24,6 +29,8 @@ from transformers import LlamaForCausalLM, LlamaTokenizer
 
 from utils.prompter import Prompter
 
+
+logger = logging.getLogger(__name__)
 
 def train(
     # model/data params
@@ -86,6 +93,16 @@ def train(
     ), "Please specify a --base_model, e.g. --base_model='huggyllama/llama-7b'"
     gradient_accumulation_steps = batch_size // micro_batch_size
 
+    if not os.path.exists(output_dir):
+        os.mkdir(output_dir)
+
+    # Setup logging
+    logging.basicConfig(
+        filename=os.path.join(output_dir, "log.txt"),
+        format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
+        datefmt="%m/%d/%Y %H:%M:%S",
+    )
+
     prompter = Prompter(prompt_template_name)
 
     device_map = "auto"
@@ -112,6 +129,7 @@ def train(
         load_in_8bit=True,
         torch_dtype=torch.float16,
         device_map=device_map,
+        cache_dir="./cache"
     )
 
     tokenizer = LlamaTokenizer.from_pretrained(base_model)
@@ -204,52 +222,76 @@ def train(
     model.print_trainable_parameters()  # Be more transparent about the % of trainable params.
 
     if val_set_size > 0:
-        train_val = data["train"].train_test_split(
-            test_size=val_set_size, shuffle=True, seed=42
-        )
+        if not data.get('validation'):
+            train_val = data["train"].train_test_split(
+                test_size=val_set_size, shuffle=True, seed=42
+            )
+            data["train"] = train_val["train"]
+            data["validation"] = train_val["test"]
+        
         train_data = (
-            train_val["train"].shuffle().map(generate_and_tokenize_prompt)
+            data["train"].shuffle().map(generate_and_tokenize_prompt)
         )
         val_data = (
-            train_val["test"].shuffle().map(generate_and_tokenize_prompt)
+            data["validation"].shuffle().map(generate_and_tokenize_prompt)
         )
     else:
         train_data = data["train"].shuffle().map(generate_and_tokenize_prompt)
         val_data = None
+
+    test_data = (
+        data["test"].shuffle().map(generate_and_tokenize_prompt)
+    ) if data.get('test') else None
 
     if not ddp and torch.cuda.device_count() > 1:
         # keeps Trainer from trying its own DataParallelism when more than 1 gpu is available
         model.is_parallelizable = True
         model.model_parallel = True
 
-    trainer = transformers.Trainer(
+    def preprocess_logits_for_metrics(logits, labels):
+        pred_ids = torch.argmax(logits, dim=-1)
+        return pred_ids, labels
+    
+    training_args = transformers.TrainingArguments(
+        per_device_train_batch_size=micro_batch_size,
+        per_device_eval_batch_size=4,
+        gradient_accumulation_steps=gradient_accumulation_steps,
+        warmup_ratio=0.1,
+        num_train_epochs=num_epochs,
+        learning_rate=learning_rate,
+        fp16=True,
+        logging_steps=10,
+        optim="adamw_torch",
+        evaluation_strategy="steps" if val_set_size > 0 else "no",
+        save_strategy="steps",
+        eval_steps=100 if val_set_size > 0 else None,
+        save_steps=100,
+        output_dir=output_dir,
+        save_total_limit=3,
+        load_best_model_at_end=True if val_set_size > 0 else False,
+        ddp_find_unused_parameters=False if ddp else None,
+        group_by_length=group_by_length,
+        run_name=wandb_run_name if use_wandb else None,
+    )
+
+    log_level = training_args.get_process_log_level()
+    logger.setLevel(log_level)
+    datasets.utils.logging.set_verbosity(log_level)
+    transformers.utils.logging.set_verbosity(log_level)
+
+    trainer = AlpacaTrainer(
         model=model,
         train_dataset=train_data,
         eval_dataset=val_data,
-        args=transformers.TrainingArguments(
-            per_device_train_batch_size=micro_batch_size,
-            gradient_accumulation_steps=gradient_accumulation_steps,
-            warmup_steps=100,
-            num_train_epochs=num_epochs,
-            learning_rate=learning_rate,
-            fp16=True,
-            logging_steps=10,
-            optim="adamw_torch",
-            evaluation_strategy="steps" if val_set_size > 0 else "no",
-            save_strategy="steps",
-            eval_steps=200 if val_set_size > 0 else None,
-            save_steps=200,
-            output_dir=output_dir,
-            save_total_limit=3,
-            load_best_model_at_end=True if val_set_size > 0 else False,
-            ddp_find_unused_parameters=False if ddp else None,
-            group_by_length=group_by_length,
-            report_to="wandb" if use_wandb else None,
-            run_name=wandb_run_name if use_wandb else None,
-        ),
+        test_dataset=test_data,
+        tokenizer=tokenizer,
+        args=training_args,
+        preprocess_logits_for_metrics=preprocess_logits_for_metrics,
+        # Dynamic padding with data collator instead of pad by tokenizer
         data_collator=transformers.DataCollatorForSeq2Seq(
             tokenizer, pad_to_multiple_of=8, return_tensors="pt", padding=True
         ),
+        output_dir=output_dir
     )
     model.config.use_cache = False
 

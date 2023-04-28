@@ -43,12 +43,15 @@ def main(
             base_model,
             load_in_8bit=load_8bit,
             torch_dtype=torch.float16,
-            device_map="auto",
+            cache_dir="./cache",
+            device_map={'':0}
         )
         model = PeftModel.from_pretrained(
             model,
             lora_weights,
             torch_dtype=torch.float16,
+            device_map={'':0},
+            cache_dir="./cache/lora",
         )
     elif device == "mps":
         model = LlamaForCausalLM.from_pretrained(

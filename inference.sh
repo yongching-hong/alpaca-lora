@@ -1,0 +1,11 @@
+python inference.py \
+    --base_model 'yahma/llama-7b-hf' \
+    --lora_weights './lora-alpaca/fewnerd/7b_alpaca1' \
+    --output_dir './lora-alpaca/fewnerd/7b_alpaca1' \
+    --data_path './data/fewnerd/K200/prompted' \
+    --cutoff_len 512 \
+    --batch_size 4 \
+    --top_p 1 \
+    --top_k 40 \
+    --num_beams 1 \
+    --device_no 0 \
