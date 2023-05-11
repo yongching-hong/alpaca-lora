@@ -38,8 +38,25 @@ IUIE_NER_INSTRUCT_TEMPLATE = [
     'Please tell me all the entity words in the text that belong to a given category. Output format is "word1:type1; word2:type2".'
 ]
 
+UIE_NER_INSTRUCT_TEMPLATE = [
+    'Please list all entity words in the text that fit the category.',
+    'Please find all the entity words associated with the category in the given text.',
+    'Please tell me all the entity words in the text that belong to a given category.'
+]
+
 IUIE_RE_INSTRUCT_TEMPLATE = [
     'Given a phrase that describes the relationship between two words, extract the words and the lexical relationship between them. The output format should be "relation1: word1, word2; relation2: word3, word4".',
     'Find the phrases in the following sentences that have a given relationship. The output format is "relation1: word1, word2; relation2: word3, word4".',
     'Given a sentence, please extract the subject and object containing a certain relation in the sentence according to the following relation types, in the format of "relation1: word1, word2; relation2: word3, word4".'
+]
+
+NER_SPAN_AUX_TEMPLATE = [
+    "Identify the entity spans from the input."
+]
+NER_TYPE_AUX_TEMPLATE = [
+    "Identify the entity type from given entity spans."
+]
+
+TYPE_TEMPLATE = [
+    '{arg} is {role}'
 ]

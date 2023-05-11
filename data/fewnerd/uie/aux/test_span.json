@@ -1,0 +1,1252 @@
+[
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " A just regard for the economic needs of Palestine and Arabia demands that free access to the Hedjaz Railway throughout its length be accorded both Governments . ''",
+        "output": "Palestine, Arabia, Hedjaz Railway"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The railway was improved , with an extension to La Corbi\u00e8re Pavilion opening in 1899 and was successful up to the outbreak of the First World War .",
+        "output": "La Corbi\u00e8re Pavilion, First World War"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Oregon Route 99 was formed from parts of the former U.S. Route 99 ; it shares much of its route with Interstate 5 , but much of it is also independent .",
+        "output": "Oregon Route 99, U.S. Route 99, Interstate 5"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The Crieff and Comrie Railway was a Scottish railway , opened in 1893 , connecting Comrie to the railway network at Crieff .",
+        "output": "Crieff and Comrie Railway, Scottish, Comrie, Crieff"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In 2009 , Popeyes introduced `` Annie the Chicken Queen '' , a fictitious , upbeat , African - American Popeyes chef .",
+        "output": "Popeyes, Annie, African, American"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " During his youth he also performed in regional musical productions such as Oliver !",
+        "output": "Oliver"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In 2003 she appeared in the play `` Mum 's The Word `` ( written by Linda A Carson , Jill Daum , Alison Kelly , Robin Nichol , Barbara Pollard and Deborah Williams ) at the Albery Theatre in London .",
+        "output": "Mum 's The Word, Linda A Carson, Jill Daum, Alison Kelly, Robin Nichol, Barbara Pollard, Deborah Williams, Albery Theatre, London"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The record for most penalty minutes is held by Mick Vukota with 1,879 minutes while the record for most goals is held by Mike Bossy , who scored 573 goals over a ten-year time period .",
+        "output": "Mick Vukota, Mike Bossy"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The following overtime , Bure scored to eliminate the Flames and advance the Canucks to the second round .",
+        "output": "Bure, Flames, Canucks"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Brown 's 108 not out was off only 63 balls , including sixteen boundaries .",
+        "output": "Brown"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " MacDonald proved to be capable in his new role , finishing with 14 wins and 6 losses in the 25 games he played .",
+        "output": "MacDonald"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Contrary to news reports the day before , Tyler Hamilton did compete , although he came in nearly last .",
+        "output": "Tyler Hamilton"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Walcher 's first World Cup victory came in January 1977 at Morzine , France , his seventh podium .",
+        "output": "Walcher, World Cup, Morzine, France"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Juan Alberto Schiaffino doubled the lead just after the break , but Tom Finney kept England 's foot in the door with his sixty seventh-minute goal .",
+        "output": "Juan Alberto Schiaffino, Tom Finney, England"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " On February 1 , 2006 , they managed to beat the Kobe Bryant -led Lakers , keeping the high-scorer below his average .",
+        "output": "Kobe Bryant, Lakers"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Caley played junior hockey in the Saskatchewan Junior Hockey League for the Weyburn Red Wings for three seasons as well as one game in the Ontario Hockey Association 's Junior A division with the Peterborough Petes .",
+        "output": "Caley, Saskatchewan Junior Hockey League, Weyburn Red Wings, Ontario Hockey Association 's Junior A, Peterborough Petes"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " McGee took second on the attempted throw home by center fielder Kirby Puckett .",
+        "output": "McGee, Kirby Puckett"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Malai is a former winner of an event on the Euro Tour , winning the `` 2012 North Cyprus Open `` .",
+        "output": "Malai, 2012 North Cyprus Open"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Upon returning to the SM-liiga , Karalahti resumed his role as one of HIFK 's premier defensemen .",
+        "output": "Karalahti"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Privately , however , the CIA and President Dwight D. Eisenhower were aware of progress being made by the Soviets on Sputnik from secret spy plane imagery .",
+        "output": "CIA, Dwight D. Eisenhower, Soviets, Sputnik"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Her sister , Gertrude Stapleton-Bretherton , married Vice-Admiral Kenneth Dewar ( 1879\u20131964 ) .",
+        "output": "Gertrude Stapleton-Bretherton, Kenneth Dewar"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In 1970 , President Mongella graduated from the University of East Africa in Dar es Salaam .",
+        "output": "President Mongella, University of East Africa, Dar es Salaam"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Carlos Augustus Sperry was the Democratic President of the West Virginia Senate from Greenbrier County and served in 1872 .",
+        "output": "Carlos Augustus Sperry, West Virginia Senate, Greenbrier County"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Matangi is n't as willing to wholeheartedly accept the edicts of the U.S . forces , particularly if they go against the well-being of his own people .",
+        "output": "Matangi, U.S ."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Edward Malone replaced Steuart as party leader in 1976 .",
+        "output": "Edward Malone, Steuart"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Dalmau de Queralt , Count of Santa Coloma , who was the Spanish viceroy of Catalonia at the time , was assassinated by the rebels near the beginning of the revolt .",
+        "output": "Dalmau de Queralt , Count of Santa Coloma, Spanish, Catalonia"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Goedhart developed an aversion of communism and became a socialist .",
+        "output": "Goedhart"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Her party membership was suspended on 18 June 2018 following criticism of Neil Hamilton 's nomination as an assembly commissioner .",
+        "output": "Neil Hamilton"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Polls of historians and political scientists have generally ranked Hoover in the bottom third of presidents .",
+        "output": "Hoover"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " One of his sons , Rev Colin Campbell , followed his father as Minister at Renfrew .",
+        "output": "Rev Colin Campbell, Renfrew"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Alexander ( ) , known by the title comes ( ) , was a Byzantine diplomat .",
+        "output": "Alexander, Byzantine"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Marie was a younger sister of his daughter-in-law Marguerite of Savoy .",
+        "output": "Marie, Marguerite, Savoy"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In 1924 , the Alfred H. Smith Memorial Bridge was constructed as part of the Hudson River Connecting Railroad 's Castleton Cut-Off , a 27.5-mile-long freight bypass of the congested West Albany terminal area and West Albany Hill .",
+        "output": "Alfred H. Smith Memorial Bridge, Hudson River, Albany, West Albany Hill"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " It crosses the Saint Lawrence River approximately west ( upstream ) of the Quebec Bridge between Quebec City and L\u00e9vis , Quebec .",
+        "output": "Saint Lawrence River, Quebec Bridge, Quebec City, L\u00e9vis, Quebec"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " AUT declined in both cases , although an event commemorating the 1989 Tiananmen Square protests was unable to proceed due to a conflict with the Queen 's Official Birthday holiday .",
+        "output": "AUT, the 1989 Tiananmen Square protests, the Queen 's Official Birthday holiday"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The University of Texas medical system has additional branches in Dallas , San Antonio , Tyler , and Galveston .",
+        "output": "The University of Texas, Dallas, San Antonio, Tyler, Galveston"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " There is also a Brown University dormitory that bears his name .",
+        "output": "Brown University"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Public school students in ninth through twelfth grades attend Voorhees High School , which also serves students from Glen Gardner , Hampton , High Bridge , Lebanon Township and Tewksbury Township .",
+        "output": "Voorhees High School, Glen Gardner, Hampton, High Bridge, Lebanon Township, Tewksbury Township"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The courses are situated amid mature woodland on the Duke of Bedford 's Woburn Abbey estate .",
+        "output": "Duke of Bedford, Woburn Abbey"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Harker Glacier is a tidewater glacier that contributes icebergs to the bay .",
+        "output": "Harker Glacier"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " ACE and DC-SIGN are two trans-membrane retrovirus receptors ( mannose receptors ) which can bind `` the plant lectins C-type mannose binding domain `` .",
+        "output": "ACE, DC-SIGN, trans-membrane retrovirus receptors, mannose receptors, plant lectins C-type mannose binding domain"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Gliophorus europerplexus is a species of agaric fungus in the family Hygrophoraceae ( `` waxcaps `` ) .",
+        "output": "Gliophorus europerplexus, Hygrophoraceae, waxcaps"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Other factors shown to provide positional information to the neural progenitor cells include fibroblast growth factors ( FGFs ) and retinoic acid .",
+        "output": "neural progenitor cells, fibroblast growth factors, FGFs, retinoic acid"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The positive B cell signaling is initiated by binding of foreign antigen to surface immunoglobulin .",
+        "output": "foreign antigen, surface immunoglobulin"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In 1996 and 1997 , Peil toured in A. R. Gurney 's play , `` Sylvia `` with Charles Kimbrough and Stephanie Zimbalist .",
+        "output": "Peil, A. R. Gurney, Sylvia, Charles Kimbrough, Stephanie Zimbalist"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Billy Bob Thornton was highly praised in the role of Ed Crane .",
+        "output": "Billy Bob Thornton, Ed Crane"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Jonathan Routh , born John Reginald Surdeval Routh , ( 1927\u20132008 ) co-starred in the British version of the television show `` Candid Camera `` ( 1960\u201367 ) and co-starred with Germaine Greer and Kenny Everett in a later attempt at a revival , `` Nice Time `` ( 1968 ) .",
+        "output": "Jonathan Routh, John Reginald Surdeval Routh, British, Candid Camera, Germaine Greer, Kenny Everett, Nice Time"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " \u0160kerjanc received the Pre\u0161eren Award four times , in 1947 for his `` Concert for Violin and Orchestra '' ( ) , and then again in 1948 , 1950 and 1971 .",
+        "output": "\u0160kerjanc, Pre\u0161eren Award"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " He won the National League Rookie of the Year award in and the National League Cy Young Award in .",
+        "output": "National League Rookie of the Year, National League Cy Young Award"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The oft-cited example of a `` bad magic food '' is the enchanted Turkish Delight that Edmund eats with the Witch , while the ordinary foods are the wholesome teas of Mr. Tummnus and the Beavers , or the meal Lucy eats with Corakin the Magician of `` an omelette , piping hot , cold lamb and green peas , a strawberry ice , lemon-squash to drink with the meal and cup of chocolate to follow . ''",
+        "output": "Turkish Delight, Edmund, Witch, Mr. Tummnus, Beavers, Lucy, Corakin the Magician"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Carlina is a genus of flowering plants in the aster family , Asteraceae .",
+        "output": "Carlina, Asteraceae"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " A stripped-down version of the PC-based server , Microsoft Mail for PC Networks , was included in Windows 95 and Windows NT 4.0 .",
+        "output": "PC-based server, Microsoft Mail, PC Networks, Windows 95, Windows NT 4.0"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " is featured as an unlockable character in `` Mario Kart DS `` , `` Super Smash Bros. Brawl `` , `` Super Smash Bros. for Nintendo 3DS `` and `` Wii U `` , and `` Super Smash Bros .",
+        "output": "Mario Kart DS, Super Smash Bros. Brawl, Super Smash Bros. for Nintendo 3DS, Wii U"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " A fifth title known as `` Jet Moto : SOLAR `` was being developed by RedZone Interactive for the PlayStation 2 , but no screenshots or video of gameplay were ever released , and the game was cancelled in 2003 .",
+        "output": "Jet Moto : SOLAR, RedZone Interactive, PlayStation 2"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Shadow Fighter is a computer game for the Commodore Amiga , and Amiga CD32 developed by NAPS team and published by Gremlin Interactive in 1994 , and became one of the Amiga 's best fighting game offerings during its final years , competing at the time with the likes of Acclaim 's impressive home console ports of Midway 's `` Mortal Kombat `` franchise , and Team17 's `` Body Blows `` .",
+        "output": "Shadow Fighter, Commodore Amiga, Amiga CD32, NAPS team, Gremlin Interactive, Amiga, Acclaim, Midway, Mortal Kombat, Team17, Body Blows"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The game was held on July 8 , 1935 , at Cleveland Stadium in Cleveland , Ohio , hosted by the Cleveland Indians of the American League .",
+        "output": "Cleveland Stadium, Cleveland, Ohio, Cleveland Indians, American League"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Only a generation later , a Hittite -speaking king had chosen the site as his residence and capital .",
+        "output": "Hittite"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Oriya speakers numbered 1,600,000 , or 13.5 % , but the transfer of Sambalpur District to Bengal in 1905 reduced the number of Oriya speakers to 292,000 .",
+        "output": "Oriya, Sambalpur District, Bengal, Oriya"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The Liang dynasty was under the civil war during the Hou Jing rebellion and the famous Chinese general Chen Batian 's ( Tr\u1ea7n B\u00e1 Ti\u00ean ) skills and troops were needed in his homeland to quell a revolt .",
+        "output": "Chinese, Chen Batian, Tr\u1ea7n B\u00e1 Ti\u00ean"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The family grew to include two daughters and two sons by 1920 when Isabel died in the Spanish Flu epidemic .",
+        "output": "Isabel, Spanish Flu"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " A stress cough is when the airways of the throat are blocked to the point that causes a reflexive spasm .",
+        "output": "stress cough"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Roxy & amp ; Elsewhere is a double live album by Frank Zappa and The Mothers , released in September 1974 .",
+        "output": "Roxy & amp ; Elsewhere, Frank Zappa, The Mothers"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " New proposed planes required higher thrust and customers wanted the Boeing 777 and Airbus A330 twinjets to fly Extended-range Twin-engine Operations at introduction .",
+        "output": "Boeing 777, Airbus A330 twinjets, Extended-range Twin-engine Operations"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " A replacement , Monospar 1 G-ABVN , was hired for a few weeks while \u2018 CEW was repaired by General Aircraft at Croydon Airport .",
+        "output": "Monospar 1 G-ABVN, CEW, General Aircraft, Croydon Airport"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " There were 290 people on board the aircraft\u2014an Airbus A330-323E operated by Northwest Airlines , which had merged with Delta Air Lines the year before .",
+        "output": "aircraft\u2014an Airbus A330-323E, Delta Air Lines"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The Microscopium Supercluster is a supercluster located in the constellation Microscopium .",
+        "output": "Microscopium Supercluster, supercluster, constellation Microscopium"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Other notable members include the companion galaxy to the Whirlpool Galaxy ( M51B ) and the Sunflower Galaxy ( M63 ) .",
+        "output": "Whirlpool Galaxy, M51B, Sunflower Galaxy, M63"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " To the south of Epsilon Cygni is the Veil Nebula ( NGC 6960 , 6962 , 6979 , 6992 , and 6995 ) , a 5,000-year-old supernova remnant covering approximately 3 degrees of the sky - it is over 50 light-years long .",
+        "output": "Epsilon Cygni, Veil Nebula, NGC 6960"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " During the first decade of the 2000s , there were serious concerns the 325 metres ( 1,066 ft ) wide asteroid 99942 Apophis posed a risk of impacting Earth in 2036 .",
+        "output": "99942 Apophis, Earth"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Founded in 992 , it is the head temple of the Bodaisen Shingon sect .",
+        "output": "Bodaisen Shingon"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In the early 17th century an expulsion of Muslims was ordered , but in Murcia territory they had permission to stay .",
+        "output": "Muslims, Murcia"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " MINI has also released an all-new model called the MINI 5-door ( AKA 4-door in US , F55 ) .",
+        "output": "MINI, MINI 5-door, US, F55"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Derived from the Ford Explorer ( itself derived from the Ford Ranger at the time ) , the Mountaineer differed from the Explorer in its fitment all-wheel drive ( rather than four-wheel drive ) ; a V8 engine was standard ( initially ) .",
+        "output": "Ford Explorer, Ford Ranger, Mountaineer, Explorer, V8 engine"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " A version of the 1930s Snipe remained available , with the 1936-introduced 2731 cc engine .",
+        "output": "Snipe, 2731 cc engine"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Gilbert recommended Davy , and in 1798 Gregory Watt showed Beddoes the `` Young man 's Researches on Heat and Light `` , which were subsequently published by him in the first volume of `` West-Country Contributions `` .",
+        "output": "Gilbert, Davy, Gregory Watt, Beddoes, Young man 's Researches on Heat and Light, West-Country Contributions"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " This is a characteristic Rochelle highlights as similar in both Taiwan and Hong Kong and is what makes Hong Kong a `` modern City of Sadness . ''",
+        "output": "Rochelle, Taiwan, Hong Kong, Hong Kong"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " D'Augelli , Anthony R . ( 1989 ) .",
+        "output": "D'Augelli, Anthony R"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Apparently Hegel 's error comes from a misreading of Plutarch 's `` Life of Demetrius '' which is about Demetrius Poliorcetes and not Demetrius of Phalereus .",
+        "output": "Hegel, Plutarch, Demetrius Poliorcetes, Demetrius"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Luke Howard , amateur meteorologist and namer of clouds , lived at Ackworth Court .",
+        "output": "Luke Howard, Ackworth Court"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In 2017 , at gold , it produced 6.2 tons , at a value of R $ 730 million .",
+        "output": "R $"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " However , with the completion of the second phase , crude and by-products of oil can also be traded on the exchange in both Iranian Rial and Euro .",
+        "output": "Iranian Rial, Euro"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Phipps credited Gudin with 4,294 soldiers and Loison with 4,366 men .",
+        "output": "Phipps, Gudin, Loison"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " `` Royal Rumble `` received positive reviews , most notably from Arda Ocal and Jim Korderas of Right After Wrestling on SIRIUS Radio 98 , who called it one of the best Royal Rumble matches in recent memory .",
+        "output": "Royal Rumble, Arda Ocal, Jim Korderas, Right After Wrestling, SIRIUS Radio 98, Royal Rumble"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " A comic opera , `` The Murder of Comrade Sharik `` by William Bergsma ( 1973 ) , is based on the plot of the story .",
+        "output": "The Murder of Comrade Sharik, William Bergsma"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Efforts to rebuild from the storm in Niue lasted almost the entire year of 2004 .",
+        "output": "Niue"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The northern variant allowed for usage of existing railway infrastructure and therefore was cheaper , but the railroad in this case would be longer and would have passed in the northern part of the Taman Peninsula , avoiding most economically developed areas of it .",
+        "output": "Taman Peninsula"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Madimbo , Savannah , Caterpillar , Protea , Thunder Chariot , Ops Eardrum , Ops Paal , Excalibur 1 & amp ; 2 , Eagle Hill , Kwiksilwer , Vincity and Southern Cross .",
+        "output": "Madimbo, Savannah, Caterpillar, Protea, Thunder Chariot, Ops Eardrum, Ops Paal, Excalibur 1 & amp ; 2, Eagle Hill, Southern Cross"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Shakti Peethas or divine seats of Shakti or the Primordial Mother Goddess , thus came into being wherever these severed parts of Sati 's body had fallen .",
+        "output": "Shakti Peethas, Shakti, Primordial Mother Goddess, Sati 's"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " He was a son of Hermes and the Oceanid Daeira , or of Ogygus .",
+        "output": "Hermes, Oceanid Daeira, Ogygus"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Later , on her own , Nyx gives birth to Moros ( Doom , Destiny ) , the Keres ( Destruction , Death ) , Thanatos ( Death ) , Hypnos ( Sleep ) , the Oneiroi ( Dreams ) , Momus ( Blame ) , Oizys ( Pain , Distress ) , the Hesperides , the Moirai ( Fates ) , Nemesis ( Indignation , Retribution ) , Apate ( Deceit ) , Philotes ( Friendship ) , Geras ( Old Age ) , and Eris ( Strife ) .",
+        "output": "Nyx, Moros, Keres, Thanatos, Hypnos, Oneiroi, Momus, Oizys, Hesperides, Moirai, Nemesis, Apate, Philotes, Geras, Eris"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " When Odin was exiled , Ollerus was chosen to take his place .",
+        "output": "Odin, Ollerus"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The interior scenes were filmed at the Gold Medal Studios , the Bronx , New York ; in addition to Maryland , location filming was also done in Hollywood , at the Beverly Hills Hotel in Beverly Hills and at the Fox Village Theater , Westwood , California .",
+        "output": "Gold Medal Studios, Bronx, New York, Maryland, Hollywood, Beverly Hills Hotel, Beverly Hills, Fox Village Theater, Westwood, California"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The act has been challenged in light of the Thirteenth Amendment to the United States Constitution which prohibits `` involuntary servitude '' .",
+        "output": "Thirteenth Amendment, United States Constitution"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The act was amended by the Political Parties , Elections and Referendums Act 2000 ( 2000 c. 41 ) to change the registration authority to the Electoral Commission from `` the registrar or other officer who performs the duty of registration of companies in England and Wales under the Companies Act 1985 ``",
+        "output": "the Political Parties , Elections and Referendums Act 2000, the Electoral Commission, England, Wales, the Companies Act 1985"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " By the Treaty of Gulistan ( 1813 ) , Qajar Persia was forced to officially cede eastern Georgia to the Russian Empire .",
+        "output": "Treaty of Gulistan, Qajar Persia, Georgia, Russian Empire"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The law repeals the Singapore Army Act and People \u2019 s Defence Force Act of 1965 and is designed specifically to subject enlisted personnel under military law during the period of enlistment and service .",
+        "output": "Singapore Army Act, People \u2019 s Defence Force Act"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In Congo , Tanzania and Kenya ( East Africa ) , thinly sliced collard greens are the main accompaniments of a popular dish known as `` sima `` or `` ugali `` ( a maize flour cake ) .",
+        "output": "Congo, Tanzania, Kenya, East Africa, sima, ugali"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " There is evidence that spironolactone may block voltage-dependent Ca2+ channels .",
+        "output": "spironolactone, Ca2+"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Between 1908 and 1921 , Goodison Park also played host to four rugby league Kangaroo Tour matches involving the Australian and Australasian teams from 1908\u20131921 .",
+        "output": "Goodison Park, Kangaroo Tour, Australian, Australasian"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In the first year of the World War I , `` Andrei Pervozvanny `` and `` Imperator Pavel I `` comprised the battle core of the Baltic Fleet .",
+        "output": "World War I, Andrei Pervozvanny, Imperator Pavel I, Baltic Fleet"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The last of the fleet , the `` Anzac Clipper `` NC18611 ( A ) , was resold and scrapped at Baltimore , Maryland in late 1951 .",
+        "output": "Anzac Clipper, Baltimore, Maryland"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Bachelor of Social Sciences 4 .",
+        "output": "Bachelor of Social Sciences"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The race involved competitors flying from Wolverhampton Airport ( next to the Goodyear plant in Wolverhampton ) and back again in a circle via Pillarton Hal l , Penkridge , Wheaton Aston , Ackerley and Wolverhampton again in a round trip .",
+        "output": "Wolverhampton Airport, Goodyear plant, Wolverhampton, Pillarton Hal, Penkridge, Wheaton Aston, Ackerley, Wolverhampton"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Strigino was officially exploited on 23 July 1923 , as a domestic airport .",
+        "output": "Strigino"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " On 31 March 2000 , following a major reorganisation of the public sector healthcare services initiated by the Ministry of Health , the Singapore General Hospital came under the management of Singapore Health Services or SingHealth .",
+        "output": "Ministry of Health, Singapore General Hospital, Singapore Health Services or SingHealth"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Various classes of multiple units have been used , including NSB Class 86 , NSB Class 87 and NSB Class 91 .",
+        "output": "NSB Class 86, NSB Class 87, NSB Class 91"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " On November 14 , 2009 , the doors of the Lafayette Library and Learning Center opened for the first time .",
+        "output": "Lafayette Library, Learning Center"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " There is a large collection of her literary papers and correspondence in the British Library acquired in 2000 ( Add MSS 78832-78903 ) .",
+        "output": "British Library"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Local authorities believe the victim , a 24-year-old employee at Nathan 's Famous hot dog restaurant in the Luxor food court , was the intended target .",
+        "output": "Nathan 's Famous, Luxor"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Pagliacci Pizza is a Seattle -based restaurant chain .",
+        "output": "Pagliacci Pizza, Seattle"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " 1998 : ACTED deployed teams in Nicaragua , following the Hurricane Mitch disaster , and in the Balkans after the conflict in Kosovo .",
+        "output": "ACTED, Nicaragua, Hurricane Mitch disaster, Balkans, conflict in Kosovo"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Severe Tropical Cyclone Heta was a powerful Category 5 tropical cyclone that caused moderate damage to the islands of Tonga , Niue , and American Samoa during late December 2003 and early January 2004 .",
+        "output": "Tropical Cyclone Heta, islands of Tonga, Niue, American Samoa"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " He joined the other Sinn F\u00e9in members by refusing to sit in the Westminster House of Commons and in January 1919 attended the inaugural meeting of the First D\u00e1il at the Mansion House , Dublin , which proclaimed itself parliament of an Irish Republic .",
+        "output": "Sinn F\u00e9in, Westminster House of Commons, Dublin, Irish Republic"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Union of Social Democrats ( , ) is an all-Russian non-governmental organization founded on 20 October 2007 by former Soviet leader Mikhail Gorbachev .",
+        "output": "Union of Social Democrats, all-Russian, Soviet, Mikhail Gorbachev"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The originals , the `` Paintings from Sant Joan in Bo\u00ed `` , are in the Museu Nacional d'Art de Catalunya in Barcelona , and there are reproductions in the church .",
+        "output": "Paintings from Sant Joan in Bo\u00ed, Museu Nacional d'Art de Catalunya, Barcelona"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The FBI investigation and the work of the Missouri State Highway Patrol prevented the attack .",
+        "output": "FBI, Missouri State Highway Patrol"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " From 1914 she was active in the Union of Democratic Control .",
+        "output": "Union of Democratic Control"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Shown at the Magnetic North Theatre Festival , Ottawa in 2013 .",
+        "output": "the Magnetic North Theatre Festival, Ottawa"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Pollution has lessened since the 1990s .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " I was flabbergasted and asked myself why I had believed completely the opposite all my life without every trying to make it evidence based . ''",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " If the vestibular aqueduct is larger in size , and the clinical presentation is consistent , the diagnosis can be made .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In contrast to the damselflies ( Zygoptera ) , which tend to have restricted distributions , some genera and species are spread across continents .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " He paved the way we just walked through it . ''",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " 1 linebacker .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Dancing with fire , water sphere choreographies and the fireworks show were among other captivating spectacles performed by the group .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " It is important to note that `` S '' is commonly considered a mnemonist as well , given that he applied his synesthesia as an aid toward acquiring exceptional memory .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " They are easily identified by baldie grille-less short hood .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Omar Mukhtar , a Senussi sheikh , became the leader of the uprising .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Lesser amounts fell to the east and west of that line , but it was the largest early-season snowstorm for the entire region .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Users who had this backup storage option were able to save all of their data .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " A revised version of Snoopy ! ! !",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Note : many maps cited are dead links as of 2016 .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Washington personally oversaw this effort through the end of his presidency .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " 2,557 and miscellaneous Rs .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " He was promoted to flying officer on 11 October 1986 .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In the winter , the harsh weather made the food cart inoperable .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " & amp ; 4./JG 26 .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " is considered one of the first recognized video games .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " It really kind of screwed things up for ourselves . ''",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Nonetheless , in March he acceded to demands and accepted the appointment .",
+        "output": "There is no entity found from the input."
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " As the venture 's managing partner KingSett acquired a 60 percent share of the Royal York property , whereas InnVest acquired a 20 percent share of the property .",
+        "output": "KingSett, Royal York, InnVest"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " He is also the Chairman of Lakshadweep Development Corporation ( a U.T .",
+        "output": "Lakshadweep Development Corporation"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " There are many superstars in the B \u2019 in Music Company , such as Mayday ( \u4e94\u6708\u5929 ) , Fish Leong ( \u6881\u9759\u8339 ) , Victor Wong ( \u54c1\u51a0 ) and so on .",
+        "output": "B \u2019 in Music Company, Mayday, Fish Leong, Victor Wong"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Autech was responsible for the engine and chassis , and Zagato of the interior and exterior design .",
+        "output": "Autech, Zagato"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " IntraCorp unveiled the game at the Winter Consumer Electronics Show in January 1989 .",
+        "output": "IntraCorp, Winter Consumer Electronics Show"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Tasman Institute founder Porter became the executive chair .",
+        "output": "Tasman Institute, Porter"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In 2011 Brush Traction and Brush-Barclay were acquired from FKI by Wabtec .",
+        "output": "Brush Traction, Brush-Barclay, FKI, Wabtec"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The founder and Artistic Director of Palladio Film , von Glasow began his training with Rainer Werner Fassbinder and then worked for a number of film directors including Georg Stefan Troller , Hellmuth Costard , Alexander Kluge , Peter Zadek and Jean-Jacques Annaud before going on to study film at New York University and at the National Film School in \u0141\u00f3d\u017a , Poland .",
+        "output": "Palladio Film, von Glasow, Rainer Werner Fassbinder, Georg Stefan Troller, Hellmuth Costard, Alexander Kluge, Peter Zadek, Jean-Jacques Annaud, New York University, National Film School, \u0141\u00f3d\u017a, Poland"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In 1999 , it was acquired by The Yomiuri Shimbun Holdings , and its name was subsequently changed to Ch\u016b\u014dk\u014dron-shinsha .",
+        "output": "Yomiuri Shimbun Holdings, Ch\u016b\u014dk\u014dron-shinsha"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The battalion formed part of the Indian Corps , which was sent to France in 1914 , to shore up the British forces fighting on the Western Front during the First World War .",
+        "output": "battalion, Indian, France, British, First World War"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The archives of the Artists ' Suffrage League are held at The Women 's Library at the London School of Economics .",
+        "output": "Artists ' Suffrage League, Women 's Library, London School of Economics"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In the spring of 2001 , KNSD moved its operations into 225 Broadway , a high-rise office building in downtown San Diego that was redeveloped to serve as its studio and office facilities , which includes a glass-enclosed street-level news studio resembling that of the streetside studio at Rockefeller Center in New York City used by NBC 's `` Today `` .",
+        "output": "KNSD, 225 Broadway, San Diego, Rockefeller Center, New York City, NBC, Today"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " & lt ; br & gt ; Ten other Albanian Orthodox parishes incorporated under Bp .",
+        "output": "Albanian Orthodox, Bp"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The model year of the vehicles varied from 1967 to 1969 in compliance with NASCAR 's regulations of that era .",
+        "output": "NASCAR"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The Vault is managed through a tripartite agreement among the Norwegian Ministry of Agriculture and Food , the Crop Trust and NordGen .",
+        "output": "Vault, Norwegian Ministry of Agriculture and Food, Crop Trust, NordGen"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The RNC reported raising $ 1 million in the same period .",
+        "output": "RNC, $"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " They were a member of the Northeast Conference .",
+        "output": "Northeast Conference"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " A PAF contingent of six F-16A/B fighters was sent to the international Anatolian Eagle 2006 exercise , which also involved the U.S . and Israeli as well as the Turkish air forces .",
+        "output": "PAF, F-16A/B, Anatolian Eagle 2006, U.S, Israeli, Turkish"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Her elder sister Charlotte , married Hugh Boscawen , afterwards Lord Falmouth .",
+        "output": "Charlotte, Hugh Boscawen, Falmouth"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Hoffman was born on August 1 , 1914 , in Winter Haven , Florida .",
+        "output": "Hoffman, Winter Haven, Florida"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The Tony North character was a menacing and slick villain .",
+        "output": "Tony North"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Thuljaji was tolerant of other faiths and religions .",
+        "output": "Thuljaji"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Trump 1 shows the `` Kleiner Mann '' ( based on Hanswurst ) while trump 2 has mythological hybrids .",
+        "output": "Hanswurst"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " His mother was Sextia and his brother was Lucius Cornelius Sulla Felix .",
+        "output": "Sextia, Lucius Cornelius Sulla Felix"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In 1976 , they included the murders of three members of the Reavey family , and the attack on the Rock Bar in Tassagh . ''",
+        "output": "Reavey, Rock Bar, Tassagh"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Wilms voyaged to South Africa on the same boat as Bachmann , arriving in Cape Town on 4 July 1883 .",
+        "output": "Wilms, South Africa, Bachmann, Cape Town"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " His finishing move is his own variation of the Time Break .",
+        "output": "Time Break"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Because of his previous experience on monoplanes , Buddecke 's good friend , Rudolph Berthold , suggested that he should fly the first of the Fokker Eindecker aircraft delivered to the unit .",
+        "output": "Buddecke, Rudolph Berthold, Fokker Eindecker"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " It received a donation from \u00c9mile Armand , Relgis translating one of his works .",
+        "output": "\u00c9mile Armand, Relgis"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Livingston starred as Patrick , a shady card shark who becomes determined to save Holly from her ill-destined fate .",
+        "output": "Patrick, Holly"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Failed to qualify : Aaron Fike ( # 43 ) , David Gilliland ( # 84 ) , Stanton Barrett ( # 72 ) , Joel Kauffman ( # 12 ) , Eric McClure ( # 04 ) , Kertus Davis ( # 34 ) , Kevin Conway ( # 40 )",
+        "output": "Aaron Fike, David Gilliland, Stanton Barrett, Joel Kauffman, Eric McClure, Kertus Davis, Kevin Conway"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Clive soon realises that the rats must be behind everything .",
+        "output": "Clive"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Kamath was born on 2 December 1947 in Mangalore , Karnataka State .",
+        "output": "Kamath, Mangalore, Karnataka State"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " She began working for Raymond Blanc , first at Le Manoir aux Quat ' Saisons and then as a pastry chef at his Diamond Club within the Emirates Stadium .",
+        "output": "Raymond Blanc, Le Manoir aux Quat ' Saisons, Diamond Club, Emirates Stadium"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Beginning his college career as a double major in computer science and mathematics and the son of two accountants , Voisey was an unlikely student of classical composition .",
+        "output": "Voisey"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Abdur Rahman Baba died in 1715 CE , and his tomb is housed in a large domed shrine , or `` mazar '' , on the southern outskirts of Peshawar ( Ring Road Hazar Khwani ) .",
+        "output": "Abdur Rahman Baba, Peshawar, Ring Road Hazar Khwani"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Follow the incident , he and Edward together join the journey in order to recover the body back .",
+        "output": "Edward"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Jordan White was named the school 's first consensus All-American following the 2011 season .",
+        "output": "Jordan White"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Lair , who had become the Lawrence of Arabia of Laos , left behind a 30,000 man guerrilla army .",
+        "output": "Lair, Lawrence, Arabia, Laos"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The two contradictory blood lines in the gospels are seen as compatible if one belongs to Mary and the other to Joseph .",
+        "output": "Mary, Joseph"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Harff 's list of cases included mass killings that targeted political groups such as the victims of China 's Cultural Revolution ( 1966\u201375 ) and the Muslim Brotherhood in Syria ( 1981\u201382 ) , for which she termed the word `` politicide '' .",
+        "output": "Harff, China 's Cultural Revolution, Muslim Brotherhood in Syria"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Shaw was accused of improper advocacy for private contracts , which led to his dismissal , but a subsequent FBI investigation resulted in no charges against him .",
+        "output": "Shaw, FBI"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Notable former medical staff include Geoffrey Tovey , serologist and founder of the UK Transplant Service , which was formed in 1972 and was initially based at the hospital .",
+        "output": "Geoffrey Tovey, UK Transplant Service"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Most Native Peoples who remained in Ohio were slowly bought out and convinced to leave , or ordered to do so by law , in the early 19th century with the Indian Removal Act of 1830 .",
+        "output": "Ohio, Indian Removal Act of 1830"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Muja was founded during the era of Zemene Mesafint by the notable Weresekh ( \u12c8\u1228\u1234\u1205 ) rulers Dejazmach Birru Aligaz and Dejazmach Faris Aligaz both are the sons of Aligaz of Yejju ( died 1803 ) and he was also the Ras of Begemder , and Inderase ( regent ) of the Emperor of Ethiopia for more than six years .",
+        "output": "Muja, Zemene Mesafint, Dejazmach Birru Aligaz, Dejazmach Faris Aligaz, Aligaz of Yejju, Ethiopia"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " was an Indonesian football club based in Gianyar Regency .",
+        "output": "Gianyar Regency"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Soviet writer Boris Pilnyak visited the pub during his stay in London in 1923 .",
+        "output": "Soviet, Boris Pilnyak, London"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In 1918 great strike in cotton mills of Bombay started and soon it spread to other areas with 1,25,000 workers participating by January 1919 .",
+        "output": "Bombay"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In 1990 , her album peaked at position five on the Japanese charts .",
+        "output": "Japanese"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Her writings included translations of classical poetry and essays on Chinese art , history , and philosophy .",
+        "output": "Chinese"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " is a railway station in Iwakuni , Yamaguchi Prefecture , Japan , operated b y West Japan Railway Company ( JR West ) and Nishikigawa Railway .",
+        "output": "Iwakuni, Yamaguchi Prefecture, Japan, y West Japan Railway Company, JR West, Nishikigawa Railway"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The brigade was also praised by the Command of the Herzegovina Corps , headed by General Radovan Grubac .",
+        "output": "Herzegovina, Radovan Grubac"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " He currently lives at Liverpool , Merseyside .",
+        "output": "Liverpool, Merseyside"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Similar versions of the form are found throughout Europe , such as the Schinkel writing chair at Schloss Charlottenburg in Berlin .",
+        "output": "Europe, Schloss Charlottenburg, Berlin"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " She covered Lebanon \u2019 s violent unrest in May 2008 and reported from Saudi Arabia during the oil price crisis that summer .",
+        "output": "Lebanon, Saudi Arabia"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " DB Cargo UK run freight services on High Speed 1 using adapted Class 92 locomotives , enabling flat wagons carrying continental-size swap body containers to reach London for the first time .",
+        "output": "London"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Pteridosperms declined during the Mesozoic Era and had mostly disappeared by the end of the Cretaceous Period , though some pteridosperm-like plants seem to have survived into Eocene times , based on fossil finds in Tasmania .",
+        "output": "Tasmania"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Its largest town is Horta .",
+        "output": "Horta"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Books that have made the argument that the United States followed unilaterism instead of isolationism include Walter A. McDougall 's `` Promised Land , Crusader State `` ( 1997 ) , John Lewis Gaddis 's `` Surprise , Security , and the American Experience `` ( 2004 ) , and Bradley F. Podliska 's `` Acting Alone `` ( 2010 ) .",
+        "output": "United States, Walter A. McDougall, Promised Land , Crusader State, John Lewis Gaddis, Surprise , Security , and the American Experience, Bradley F. Podliska, Acting Alone"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The Austrians joined in 1737 ; the war ended in 1739 with the Treaty of Belgrade ( with Austria ) and the Treaty of Ni\u0161 ( with Russia ) .",
+        "output": "Austrians, Treaty of Belgrade, Austria, Treaty of Ni\u0161, Russia"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In 1969 , he moved to New Delhi where he organised and participated in various exhibitions including one at the Little Magazine Exhibition organised by Delhi Shilpi Chakra .",
+        "output": "New Delhi, Delhi Shilpi Chakra"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The company eventually became the largest chain of Italian-themed full-service restaurants in the United States .",
+        "output": "United States"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In the 19th and early 20th century , the Iranian Cleric Sheikh Fazlollah Noori opposed the Iranian Constitutional Revolution by inciting insurrection against them through issuing fatwas and publishing pamphlets arguing that democracy would bring vice to the country .",
+        "output": "Iranian, Sheikh Fazlollah Noori, Iranian Constitutional Revolution"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Many Austinites support the athletic programs of the University of Texas at Austin known as the Texas Longhorns .",
+        "output": "Austinites, University of Texas, Austin, Texas Longhorns"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Two more appearances followed with the U21 side before he was promoted and solidified his status within the senior England camp .",
+        "output": "U21, senior England camp"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " This was Shields 's first loss in over 6 years .",
+        "output": "Shields"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Its first regular-season game was a 36-35 win over the Cincinnati Bengals on September 12 , 1999 .",
+        "output": "Cincinnati Bengals"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " During his major junior career with the Vancouver Giants of the Western Hockey League ( WHL ) , Blum helped the club to a President 's Cup as WHL champions in 2006 and a Memorial Cup as Canadian Hockey League ( CHL ) champions in 2007 .",
+        "output": "Vancouver Giants, Western Hockey League, WHL, Blum, President 's Cup, WHL, Memorial Cup, Canadian Hockey League, CHL"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The frieze on the outside of the building contains scenes from Shakespeare 's `` Merchant of Venice `` .",
+        "output": "Shakespeare, Merchant of Venice"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Wildman received the Popeye Fan Club 's Lifetime Achievement Award .",
+        "output": "Wildman, Popeye Fan Club"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Stan Keller and His Orchestra performed in the 1940s at New York venues that included an 11-month engagement the Stork Club ( 1944\u201345 ) , the Waldorf , the Essex House , the Copacabana , and the Columbia Room at Hotel Astor .",
+        "output": "Stan Keller, New York, Stork Club, Waldorf, Essex House, Copacabana, Columbia Room, Hotel Astor"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Karl von Marinelli , manager of the Theater in der Leopoldstadt in Vienna , staged his play `` Der Soldat von Cherson `` , which opened on 1 May 1785 .",
+        "output": "Karl von Marinelli, Theater in der Leopoldstadt, Vienna, Der Soldat von Cherson"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Cyrus Forough is the son of Mehdi Forough , an Iranian scholar , author , dramatist , writer who founded the Academy of Dramatic Arts in Tehran , and Fakhri Dowlatabadi , one of the Iranian women pioneers in playing and teaching of western classical music and the daughter of Haji Mirza Yahya Dowlatabadi , who was the son of S ubh-i-Azal , and a prominent Constitutionalist of the 1906 Persian Constitutional Revolution and one of the founders of the modern school systems in Persia / Iran .",
+        "output": "Cyrus Forough, Mehdi Forough, Academy of Dramatic Arts in Tehran, Fakhri Dowlatabadi, Iranian, Haji Mirza Yahya Dowlatabadi, ubh-i-Azal, Persian Constitutional Revolution, Persia, Iran"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Generally playing bass guitar , Beers ' double bass work occurs on some INXS tracks including `` By My Side `` .",
+        "output": "Beers, INXS, By My Side"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The government also moved to restrict cross-examination of witnesses , to restrict jurors from reading the Siobhan Gorman `` Baltimore Sun `` articles about problems with NSA and Trailblazer , and to prevent the defense from making arguments or introducing evidence to the courtroom about whistleblowing or overclassification .",
+        "output": "Siobhan Gorman, Baltimore Sun, NSA"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Corr is involved in charitable activities .",
+        "output": "Corr"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Many of those who would later lead the League of Revolutionary Black Workers were involved in the insurrection , including John Watson , who began publishing a radical ghetto newspaper called `` The Inner City Voice `` in September 1967 , following the intense repression of the uprising .",
+        "output": "John Watson, The Inner City Voice"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In 2017 , Lin Hwai-min announced that he would retire in 2020 .",
+        "output": "Lin Hwai-min"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Alongi is an operatic tenor and sings opera with professional companies in the US .",
+        "output": "Alongi, US"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " `` The Similars `` premiered at Fantastic Fest in September 2015 .",
+        "output": "The Similars, Fantastic Fest"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Although most FPGAs also support a byte-parallel loading method as well , this usage may have originated based on the common method of configuring the FPGA from a serial bit stream , typically from a serial PROM or flash memory chip .",
+        "output": "FPGAs, FPGA, PROM"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The Big Dipper was a wooden roller coaster operating at Luna Park Sydney from 1935 until 1979 .",
+        "output": "Big Dipper, Luna Park Sydney"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Eleven and a half tons of Church Stowe limestone are said to have been used in repair work at Castle Ashby Church and House in 1982 .",
+        "output": "Castle Ashby Church and House"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " New Mills Newtown railway station serves the Peak District town of New Mills in Derbyshire , England .",
+        "output": "New Mills Newtown railway station, Peak District, New Mills, Derbyshire, England"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Cobo Hall convention and exhibit facility , which hosts the North American International Auto Show , has begun a nearly $ 300 million renovation to be completed in 2014 .",
+        "output": "Cobo Hall, North American International Auto Show"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " At the Fukushima Daiichi Nuclear Power Statio n ( Fukushima Daiichi NPS ) , operated by the Tokyo Electric Power Company ( TEPCO ) ,",
+        "output": "Fukushima Daiichi Nuclear Power Statio, Fukushima Daiichi NPS, Tokyo Electric Power Company, TEPCO"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Later the training of future employees took place in Vienna , in the newly instituted `` Montanistisches Museum `` , where Friedrich Mohs , formerly professor at Freiberg , taught from 1826 to 1839 .",
+        "output": "Montanistisches Museum, Friedrich Mohs, Freiberg"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Since the introduction of the Open Qualifying Series , the John Deere Classic is a final chance for a player not already exempt to earn entry into The Open if he finished in the top five .",
+        "output": "Open Qualifying Series ,, John Deere Classic, Open"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Whereas most of the professional crews of the earlier sloop racing , which has since died-out , were probably Black , the restriction of dinghy racing to these clubs , with their membership historically restricted to white people , means that Bermuda Fitted Dinghy racing has maintained an exclusive , all-white reputation in Bermuda .",
+        "output": "Bermuda Fitted Dinghy racing, Bermuda"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " They lost the SWAC Championship Game to Grambling State .",
+        "output": "SWAC Championship Game, Grambling State"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Also present were Miami Masters semifinalist Tom\u00e1\u0161 Berdych , Costa do Sau\u00edpe runner-up and 2002 B\u00e5stad champion Carlos Moy\u00e1 , Ga\u00ebl Monfils , Jarkko Nieminen and Robin S\u00f6derling .",
+        "output": "Miami Masters, Tom\u00e1\u0161 Berdych, Costa do Sau\u00edpe, B\u00e5stad, Carlos Moy\u00e1, Ga\u00ebl Monfils, Jarkko Nieminen, Robin S\u00f6derling"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " At the time of the Spanish Revolution led by the anarcho-syndicalist trade union CNT and by the FAI , the issue of the coexistence of different economic systems was addressed .",
+        "output": "Spanish Revolution, CNT, FAI"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The video was directed by Thomas Mignone , and released on VHS through Roadrunner Records on November 9 , 1999 .",
+        "output": "Thomas Mignone, Roadrunner Records"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The musical style of Passcode can be described as kawaii metal .",
+        "output": "Passcode"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " He wrote two volumes of private clinics ( 1876 and 1890 ) .",
+        "output": "private clinics"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " `` The Lathe of Heaven `` was nominated for a Hugo Award for Best Dramatic Presentation .",
+        "output": "The Lathe of Heaven, Hugo Award"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " In his book `` Traditional Gaelic Bagpiping 1745-1945 `` , John Gibson reprints the entire Disarming Act of 1746 , which is usually blamed for the proscription of bagpipes , and shows that bagpipes were not banned .",
+        "output": "Traditional Gaelic Bagpiping 1745-1945, John Gibson, Disarming Act of 1746"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Cysteine is the direct precursor for the synthesis of glutathione ( and its homologues ) .",
+        "output": "Cysteine, glutathione"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " It is a clear , colorless liquid that is insoluble in water , but miscible with ethanol and diethyl ether .",
+        "output": "ethanol, diethyl ether"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " The Batang Baram Bridge or ASEAN Bridge is the longest bridge in Miri Division , Sarawak , Malaysia .",
+        "output": "Batang Baram Bridge, ASEAN Bridge, Miri Division, Sarawak, Malaysia"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Catalytic hydrogenation over Raney nickel to reduce nitro group , followed by reduction with sodium borohydride provides the alcohol 4 .",
+        "output": "Raney nickel, sodium borohydride, alcohol 4"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " It was also performed in January 1998 at New York 's Dance Theater Workshop and Minneapolis ' Walker Art Center .",
+        "output": "New York 's Dance Theater Workshop, Minneapolis ' Walker Art Center"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " He also served as Editor of the `` Epworth Herald , '' the official publication of the Epworth League , 1890\u20131904 .",
+        "output": "Epworth Herald, Epworth League"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Reflecting the almost all-female development team , the game features an all-female cast , which `` The Guardian `` noted is `` a rarity on mobile platforms . `` .",
+        "output": "The Guardian"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Family Channel premiered it on April 7 , 2014 , and Disney Channel ( UK and Ireland ) premiered on May 5 , 2014 .",
+        "output": "Family Channel, Disney Channel, UK, Ireland"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " By contrast , `` The Plain Dealer `` , a largely Democratic publication , blamed Brown and abolitionist Republicans for the raid .",
+        "output": "Plain Dealer, Democratic, Brown, Republicans"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Graduating at 1968 into the turbulence of the late Vietnam War and with influence from Bob Dylan , Shoumatoff aspired to be a songwriter .",
+        "output": "Vietnam War, Bob Dylan, Shoumatoff"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " During the Polish-Swedish War in 1601 , and again from 1625 to 1626 , the Rezekne castle was occupied by the Swedish army , during the Second Northern War .",
+        "output": "Polish-Swedish War, Rezekne castle, Swedish, Second Northern War"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " Furthermore , the DpubS website states the following as the development goals of Cornell University Library and Penn State University Libraries : \u201c generalizing the platform beyond a single discipline and document format ( serials ) ; adding administrative interfaces for non-technical staff ; allowing a level of interoperability between DPubS and institutional repository systems , specifically Fedora and DSpace and developing editorial services to support the peer review process . \u201d",
+        "output": "DpubS, Cornell University Library, Penn State University Libraries, DPubS, Fedora, DSpace"
+    },
+    {
+        "instruction": "Identify the entity spans from the input.",
+        "input": " According to the Republic of the Philippines Commission on Elections ( COMELEC ) , the 2016 Certified List of Candidates for the position of President , two out of the six candidates were women :",
+        "output": "Republic of the Philippines Commission on Elections, COMELEC"
+    }
+]

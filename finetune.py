@@ -9,8 +9,7 @@ import transformers
 import datasets
 from datasets import load_dataset
 from utils.trainer import AlpacaTrainer
-
-from utils.parser import parse_response
+from utils.structure_marker import span_start, type_start, type_end, text_start, span_start, spot_prompt, asoc_prompt
 
 """
 Unused imports:
@@ -24,8 +23,9 @@ from peft import (
     get_peft_model_state_dict,
     prepare_model_for_int8_training,
     set_peft_model_state_dict,
+    TaskType
 )
-from transformers import LlamaForCausalLM, LlamaTokenizer
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 from utils.prompter import Prompter
 
@@ -54,7 +54,10 @@ def train(
     ],
     # llm hyperparams
     train_on_inputs: bool = True,  # if False, masks out inputs in loss
+    add_eos_token: bool = False,
     group_by_length: bool = False,  # faster, but produces an odd training loss curve
+    task_type: str = "CAUSAL_LM",
+    fp16: bool = True,
     # wandb params
     wandb_project: str = "",
     wandb_run_name: str = "",
@@ -62,6 +65,7 @@ def train(
     wandb_log_model: str = "",  # options: false | true
     resume_from_checkpoint: str = None,  # either training checkpoint or final adapter
     prompt_template_name: str = "alpaca",  # The prompt template to use, will default to alpaca.
+    SSI: bool = False
 ):
     if int(os.environ.get("LOCAL_RANK", 0)) == 0:
         print(
@@ -80,6 +84,7 @@ def train(
             f"lora_dropout: {lora_dropout}\n"
             f"lora_target_modules: {lora_target_modules}\n"
             f"train_on_inputs: {train_on_inputs}\n"
+            f"add_eos_token: {add_eos_token}\n"
             f"group_by_length: {group_by_length}\n"
             f"wandb_project: {wandb_project}\n"
             f"wandb_run_name: {wandb_run_name}\n"
@@ -87,6 +92,7 @@ def train(
             f"wandb_log_model: {wandb_log_model}\n"
             f"resume_from_checkpoint: {resume_from_checkpoint or False}\n"
             f"prompt template: {prompt_template_name}\n"
+            f"SSI: {SSI}\n"
         )
     assert (
         base_model
@@ -124,20 +130,31 @@ def train(
     if len(wandb_log_model) > 0:
         os.environ["WANDB_LOG_MODEL"] = wandb_log_model
 
-    model = LlamaForCausalLM.from_pretrained(
+    model = AutoModelForSeq2SeqLM.from_pretrained(
         base_model,
-        load_in_8bit=True,
+        load_in_8bit=False,
         torch_dtype=torch.float16,
         device_map=device_map,
         cache_dir="./cache"
     )
 
-    tokenizer = LlamaTokenizer.from_pretrained(base_model)
+    tokenizer = AutoTokenizer.from_pretrained(base_model, model_max_length=cutoff_len)
 
     tokenizer.pad_token_id = (
         0  # unk. we want this to be different from the eos token
     )
     tokenizer.padding_side = "left"  # Allow batched inference
+
+    if SSI:
+        to_add_special_token = list()
+        for special_token in [type_start, type_end, text_start, span_start, spot_prompt, asoc_prompt]:
+            if special_token not in tokenizer.get_vocab():
+                to_add_special_token += [special_token]
+
+        tokenizer.add_special_tokens(
+            {"additional_special_tokens": tokenizer.special_tokens_map_extended.get('additional_special_tokens', []) + to_add_special_token}
+        )
+        model.resize_token_embeddings(len(tokenizer))
 
     def tokenize(prompt, add_eos_token=True):
         # there's probably a way to do this with the tokenizer settings
@@ -172,14 +189,26 @@ def train(
             user_prompt = prompter.generate_prompt(
                 data_point["instruction"], data_point["input"]
             )
-            tokenized_user_prompt = tokenize(user_prompt, add_eos_token=False)
+            tokenized_user_prompt = tokenize(
+                user_prompt, add_eos_token=add_eos_token
+            )
             user_prompt_len = len(tokenized_user_prompt["input_ids"])
 
-            tokenized_full_prompt["labels"] = [
-                -100
-            ] * user_prompt_len + tokenized_full_prompt["labels"][
-                user_prompt_len:
-            ]  # could be sped up, probably
+            if add_eos_token:
+                user_prompt_len -= 1
+
+            if task_type == TaskType.CAUSAL_LM:
+                tokenized_full_prompt["labels"] = [
+                    -100
+                ] * user_prompt_len + tokenized_full_prompt["labels"][
+                    user_prompt_len:
+                ]  # could be sped up, probably
+            else:
+                tokenized_full_prompt["input_ids"] = tokenized_user_prompt['input_ids']
+                tokenized_full_prompt["attention_mask"] = tokenized_user_prompt['attention_mask']
+                tokenized_full_prompt["labels"] = tokenized_full_prompt["labels"][
+                    user_prompt_len:
+                ]
         return tokenized_full_prompt
 
     model = prepare_model_for_int8_training(model)
@@ -190,7 +219,7 @@ def train(
         target_modules=lora_target_modules,
         lora_dropout=lora_dropout,
         bias="none",
-        task_type="CAUSAL_LM",
+        task_type=task_type,
     )
     model = get_peft_model(model, config)
 
@@ -215,7 +244,7 @@ def train(
         if os.path.exists(checkpoint_name):
             print(f"Restarting from {checkpoint_name}")
             adapters_weights = torch.load(checkpoint_name)
-            model = set_peft_model_state_dict(model, adapters_weights)
+            set_peft_model_state_dict(model, adapters_weights)
         else:
             print(f"Checkpoint {checkpoint_name} not found")
 
@@ -238,7 +267,7 @@ def train(
     else:
         train_data = data["train"].shuffle().map(generate_and_tokenize_prompt)
         val_data = None
-
+    
     test_data = (
         data["test"].shuffle().map(generate_and_tokenize_prompt)
     ) if data.get('test') else None
@@ -249,6 +278,8 @@ def train(
         model.model_parallel = True
 
     def preprocess_logits_for_metrics(logits, labels):
+        if type(logits) is tuple:
+            logits = logits[0]
         pred_ids = torch.argmax(logits, dim=-1)
         return pred_ids, labels
     
@@ -259,7 +290,7 @@ def train(
         warmup_ratio=0.1,
         num_train_epochs=num_epochs,
         learning_rate=learning_rate,
-        fp16=True,
+        fp16=fp16,
         logging_steps=10,
         optim="adamw_torch",
         evaluation_strategy="steps" if val_set_size > 0 else "no",
@@ -271,7 +302,7 @@ def train(
         load_best_model_at_end=True if val_set_size > 0 else False,
         ddp_find_unused_parameters=False if ddp else None,
         group_by_length=group_by_length,
-        run_name=wandb_run_name if use_wandb else None,
+        run_name=wandb_run_name if use_wandb else None
     )
 
     log_level = training_args.get_process_log_level()
@@ -291,7 +322,9 @@ def train(
         data_collator=transformers.DataCollatorForSeq2Seq(
             tokenizer, pad_to_multiple_of=8, return_tensors="pt", padding=True
         ),
-        output_dir=output_dir
+        output_dir=output_dir,
+        SSI=SSI,
+        causal=task_type == TaskType.CAUSAL_LM
     )
     model.config.use_cache = False
 

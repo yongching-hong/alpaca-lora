@@ -3,16 +3,37 @@ import torch
 from transformers import Trainer
 from transformers.trainer_utils import EvalPrediction
 from utils.parser import parse_response
+from tqdm import tqdm
 
 from utils.prompter import Prompter
+from utils.spotasoc_predict_parser import SpotAsocPredictParser
 
 class AlpacaTrainer(Trainer):
-    def __init__(self, prompt_template_name=None, output_dir='', test_dataset=None, **kwargs):
+    def __init__(self, prompt_template_name=None, output_dir='', test_dataset=None, SSI=False, causal=True, **kwargs):
         super().__init__(compute_metrics=self.compute_metrics, **kwargs)
         self.prompter = Prompter(prompt_template_name)
         self.output_dir = output_dir
         self.test_dataset = test_dataset
         self.best_f1 = 0
+        self.SSI = SSI
+        self.causal = causal
+
+    def postprocess_SSI_text(self, x_str):
+        if not x_str:
+            return
+        
+        # Clean `bos` `eos` `pad` for cleaned text
+        to_remove_token_list = list()
+        # if tokenizer.bos_token:
+        #     to_remove_token_list += [tokenizer.bos_token]
+        if self.tokenizer.eos_token:
+            to_remove_token_list += [self.tokenizer.eos_token]
+        if self.tokenizer.pad_token:
+            to_remove_token_list += [self.tokenizer.pad_token]
+        
+        for to_remove_token in to_remove_token_list:
+            x_str = x_str.replace(to_remove_token, '')
+        return x_str.strip()
 
     def compute_metrics(self, eval_output: EvalPrediction):
         def eval_f1_score(gt_list, pred_list):
@@ -47,8 +68,8 @@ class AlpacaTrainer(Trainer):
 
                 for feature, gts, preds in zip(features, gt_list, pred_list):
                     f.write("--------------------------------------------------------------------\n")
-                    f.write("Insturction: {}\n".format(feature['instruction']))
-                    f.write("Input: {}\n\n".format(feature['input']))
+                    f.write("Insturction: {}\n".format(self.tokenizer.decode(feature['input_ids'])))
+                    # f.write("Input: {}\n\n".format(feature['input']))
 
                     f.write("Gt Output: {}\n".format(' '.join(map(str, set(gts))) if gts else None))
                     if preds:
@@ -66,14 +87,27 @@ class AlpacaTrainer(Trainer):
             predictions = torch.tensor(output.predictions[0])
             predictions[predictions == -100] = self.tokenizer.pad_token_id
 
-            decoded_labels = self.tokenizer.batch_decode(labels, skip_special_tokens=True)
-            decoded_preds = self.tokenizer.batch_decode(predictions, skip_special_tokens=True)
-            
-            label_responses = [self.prompter.get_response(label) for label in decoded_labels]
-            pred_responses = [self.prompter.get_response(pred) for pred in decoded_preds]
+            decoded_labels = self.tokenizer.batch_decode(labels, skip_special_tokens=not self.SSI)
+            decoded_preds = self.tokenizer.batch_decode(predictions, skip_special_tokens=not self.SSI)
 
-            gt_list = [parse_response(res) if res and 'no entity' not in res else None for res in label_responses]
-            pred_list = [parse_response(res) if res and 'no entity' not in res else None for res in pred_responses]
+            
+            if self.causal:
+                decoded_preds = [self.prompter.get_response(pred) for pred in decoded_preds]
+                decoded_labels = [self.prompter.get_response(label) for label in decoded_labels]
+
+            if self.SSI:
+                decoded_preds = [self.postprocess_SSI_text(x) or '' for x in decoded_preds]
+                decoded_labels = [self.postprocess_SSI_text(x) or '' for x in decoded_labels]
+
+                predict_parser = SpotAsocPredictParser()
+                well_formed_list, counter = predict_parser.decode(
+                    gold_list=decoded_labels, pred_list=decoded_preds
+                )
+                gt_list = [x['gold_spot'] for x in well_formed_list]
+                pred_list = [x['pred_spot'] for x in well_formed_list]
+            else:
+                gt_list = [parse_response(res) for res in decoded_labels]
+                pred_list = [parse_response(res) for res in decoded_preds]
             
             recall, precision, f1, gt_num, pred_num, correct_num = eval_f1_score(gt_list, pred_list)
             
@@ -106,4 +140,3 @@ class AlpacaTrainer(Trainer):
             #     metrics.update(test_metrics)
         
         return metrics
-    
