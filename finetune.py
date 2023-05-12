@@ -25,7 +25,7 @@ from peft import (
     set_peft_model_state_dict,
     TaskType
 )
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoModelForSeq2SeqLM, AutoTokenizer
 
 from utils.prompter import Prompter
 
@@ -33,6 +33,7 @@ from utils.prompter import Prompter
 logger = logging.getLogger(__name__)
 
 def train(
+    model_type: str = "llama",
     # model/data params
     base_model: str = "",  # the only required argument
     data_path: str = "yahma/alpaca-cleaned",
@@ -67,9 +68,29 @@ def train(
     prompt_template_name: str = "alpaca",  # The prompt template to use, will default to alpaca.
     SSI: bool = False
 ):
+    assert(
+        model_type in ["llama", "t5"]
+    ), "Model type not supported. Please specify one of the model type from the options: llama, t5"
+    
+    if model_type == "t5":
+        train_on_inputs = False
+        add_eos_token = True
+        SSI = True
+        task_type = TaskType.SEQ_2_SEQ_LM
+        fp16 = False
+        print(
+            f"Overriding preferred params for t5 to avoid unexpected behavior:\n"
+            f"train_on_inputs: {train_on_inputs}\n"
+            f"add_eos_token: {add_eos_token}\n"
+            f"SSI: {SSI}\n"
+            f"task_type: {task_type}\n"
+            f"fp16: {fp16}\n"
+        )
+
     if int(os.environ.get("LOCAL_RANK", 0)) == 0:
         print(
             f"Training Alpaca-LoRA model with params:\n"
+            f"model_type: {model_type}\n"
             f"base_model: {base_model}\n"
             f"data_path: {data_path}\n"
             f"output_dir: {output_dir}\n"
@@ -86,6 +107,8 @@ def train(
             f"train_on_inputs: {train_on_inputs}\n"
             f"add_eos_token: {add_eos_token}\n"
             f"group_by_length: {group_by_length}\n"
+            f"task_type: {task_type}\n"
+            f"fp16: {fp16}\n"
             f"wandb_project: {wandb_project}\n"
             f"wandb_run_name: {wandb_run_name}\n"
             f"wandb_watch: {wandb_watch}\n"
@@ -130,7 +153,13 @@ def train(
     if len(wandb_log_model) > 0:
         os.environ["WANDB_LOG_MODEL"] = wandb_log_model
 
-    model = AutoModelForSeq2SeqLM.from_pretrained(
+    MODEL_CLASSES = {
+        "CAUSAL_LM": AutoModelForCausalLM,
+        "SEQ_2_SEQ_LM": AutoModelForSeq2SeqLM
+    }
+    model_class = MODEL_CLASSES.get(task_type)
+
+    model = model_class.from_pretrained(
         base_model,
         load_in_8bit=False,
         torch_dtype=torch.float16,
@@ -140,10 +169,14 @@ def train(
 
     tokenizer = AutoTokenizer.from_pretrained(base_model, model_max_length=cutoff_len)
 
-    tokenizer.pad_token_id = (
-        0  # unk. we want this to be different from the eos token
-    )
-    tokenizer.padding_side = "left"  # Allow batched inference
+    if model_type == "llama":
+        tokenizer = AutoTokenizer.from_pretrained(base_model)
+        tokenizer.pad_token_id = (
+            0  # unk. we want this to be different from the eos token
+        )
+        tokenizer.padding_side = "left"  # Allow batched inference
+    else:
+        tokenizer = AutoTokenizer.from_pretrained(base_model, model_max_length=cutoff_len)
 
     if SSI:
         to_add_special_token = list()

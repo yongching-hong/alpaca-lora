@@ -7,6 +7,9 @@ import re
 
 nlp = spacy.load("en_core_web_sm")
 
+docee_path = f'./normal_setting'
+output_path = f'./normal_setting/fixed'
+
 def read_jsonlines(input_file):
     lines = []
     with jsonlines.open(input_file) as reader:
@@ -41,6 +44,13 @@ def norm_tokenize(text):
     return tokens, char_start_idx
 
 # Fix incorrect mention span index
+"""
+Original Text:  iscal policy legislation | Fixed:  {'start': 1258, 'end': 1283, 'type': 'Policy Proposals', 'text': 'fiscal policy legislation', 'tokens': ['fiscal', 'policy', 'legislation']}
+Original Text:  nvestment in education catch-up, retraining schemes, infrastructure spending, demand management frameworks | Fixed:  {'start': 9692, 'end': 9799, 'type': 'Policy Proposals', 'text': 'investment in education catch-up, retraining schemes, infrastructure spending, demand management frameworks', 'tokens': ['investment', 'in', 'education', 'catch', '-', 'up', ',', 'retraining', 'schemes', ',', 'infrastructure', 'spending', ',', 'demand', 'management', 'frameworks']}
+Original Text:  efaults | Fixed:  {'start': 4036, 'end': 4044, 'type': 'Cause', 'text': 'defaults', 'tokens': ['defaults']}
+Original Text:  atya Sai Baba | Fixed:  {'start': 328, 'end': 342, 'type': 'People', 'text': 'Satya Sai Baba', 'tokens': ['Satya', 'Sai', 'Baba']}
+Original Text:  he Queen | Fixed:  {'start': 384, 'end': 393, 'type': 'People', 'text': 'the Queen', 'tokens': ['the', 'Queen']}
+"""
 def process(lines, processed_path, processed=[], set_type='train'):
     fixed_num = 0
     
@@ -124,8 +134,11 @@ def process(lines, processed_path, processed=[], set_type='train'):
                     print(f'Saved {len(processed_docs)} processed {set_type} DocEE at {processed_path}')
 
 def run_fixed(set_type):
-    file_path = f'./data/DocEE-en/normal_setting/{set_type}.json'
-    fixed_path = f'./data/DocEE/normal_setting/fixed/{set_type}.json'
+    if not os.path.exists(output_path):
+        os.mkdir(output_path)
+
+    file_path = os.path.join(docee_path, f'{set_type}.json')
+    fixed_path = os.path.join(output_path, f'{set_type}.json')
     fixed = os.path.exists(fixed_path)
     fixed_lines = []
 
@@ -140,7 +153,4 @@ def start():
     for set_type in ['train', 'test', 'dev']:
         run_fixed(set_type)
 
-# start()
-
-
-
+start()
